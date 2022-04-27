@@ -2,12 +2,11 @@
     .display-4.pt-3 Smartflix
     .h4.mt-2.fw-light Find out more about your favourite movies.
 
-    -# .d-flex.justify-content-between.flex-wrap
-    .row.justify-content-between{:style => "--bs-gutter-x: 0;"}
+    .row{:style => "--bs-gutter-x: 0;"}
         - @shows.each do |show|
-            .card.mt-4{:style => "width: 14rem;"}
+            .card.mt-4.mx-4{:style => "width: 14rem;"}
                 %img.card-img-top{:alt => "photo not displaying", :src => "https://via.placeholder.com/150"}
                 .card-body
-                    .h5.card-title= show[:title] + " (#{show[:release_year]})"
-                    %p.card-text= show[:show_type]
+                    .h5.card-title= "#{show[:title]} (#{show[:year]})"
+                    %p.card-text= show[:type]
                     %p.card-text= show[:description]

@@ -1,16 +1,17 @@
 require "application_system_test_case"
 
 class ShowsTest < ApplicationSystemTestCase
-  test "visiting the index" do
+  test "the index page displays 10 shows by default" do
     visit root_path
   
-    assert_selector "h1", text: "Smartflix"
+    assert_text "The Starling"
+    assert_no_text "Vendetta: Truth, Lies and The Mafia"
   end
 
-  test "the index page displays every show" do
-    visit root_path
+  test "the index page can be shortened using the limit parameter" do
+    visit "/?limit=4"
   
-    assert_text "Dick Johnson Is Dead"
-    assert_text "Blood & Water"
+    assert_text "Jailbirds New Orleans"
+    assert_no_text "Kota Factory"
   end
 end
