@@ -1,6 +1,6 @@
 require "csv"
 
-class ShowsController < ApplicationController
+class PagesController < ApplicationController
     def index
         @shows = []
         CSV.foreach("lib/assets/netflix_titles.csv", headers: true, header_converters: :symbol) do |row|
