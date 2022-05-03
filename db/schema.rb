@@ -15,7 +15,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_25_114528) do
   enable_extension "plpgsql"
 
   create_table "shows", force: :cascade do |t|
-    t.string "show_type", null: false
+    t.integer "show_type", null: false
     t.string "title", null: false
     t.string "director"
     t.text "cast"

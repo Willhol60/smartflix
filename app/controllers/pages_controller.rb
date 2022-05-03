@@ -1,8 +1,7 @@
 require "csv"
 
 class PagesController < ApplicationController
-    include PagesHelper 
     def index
-        @shows = csv_data
+        @shows = Show.take(params[:limit]&.to_i || 10)
     end
 end

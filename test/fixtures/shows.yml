@@ -1,8 +1,8 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  show_type: MyString
-  title: MyString
+  show_type: 0
+  title: show1
   director: MyString
   cast: MyText
   country: MyString
@@ -14,8 +14,138 @@ one:
   description: MyText
 
 two:
-  show_type: MyString
-  title: MyString
+  show_type: 0
+  title: show2
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+three:
+  show_type: 0
+  title: show3
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+four:
+  show_type: 0
+  title: show4
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+five:
+  show_type: 0
+  title: show5
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+six:
+  show_type: 0
+  title: show6
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+seven:
+  show_type: 0
+  title: show7
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+eight:
+  show_type: 0
+  title: show8
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+nine:
+  show_type: 0
+  title: show9
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+ten:
+  show_type: 0
+  title: show10
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+eleven:
+  show_type: 0
+  title: show11
+  director: MyString
+  cast: MyText
+  country: MyString
+  date_added: 2022-04-25
+  release_year: 1
+  rating: MyString
+  duration: MyString
+  listed_in: MyText
+  description: MyText
+
+twelve:
+  show_type: 0
+  title: show12
   director: MyString
   cast: MyText
   country: MyString
