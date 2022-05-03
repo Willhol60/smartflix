@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  show_type: 0
+  show_type: 1
   title: show1
   director: MyString
   cast: MyText
@@ -27,7 +27,7 @@ two:
   description: MyText
 
 three:
-  show_type: 0
+  show_type: 1
   title: show3
   director: MyString
   cast: MyText
@@ -124,11 +124,11 @@ ten:
   cast: MyText
   country: MyString
   date_added: 2022-04-25
-  release_year: 1
+  release_year: 2000
   rating: MyString
   duration: MyString
   listed_in: MyText
-  description: MyText
+  description: LovelyDescription
 
 eleven:
   show_type: 0

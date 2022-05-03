@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 require "csv"
 require_relative "../../app/models/show.rb"
-require "pry"
 
 desc "Seed the postgres database with the CSV file"
 
 task seed: :environment do 
     puts "seeding"
-    # binding.pry
     Show.import(shows_array)
     puts "done"
 end
