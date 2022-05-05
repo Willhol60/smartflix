@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres:14.2
+    volumes:
+      - db_data:/lib/postgresql/data
+
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - database
+    environment:
+        RAILS_ENV: development
+        DATABASE_NAME: boats_development
+        DATABASE_USER: boats_development
+        DATABASE_PASSWORD: 
+        DATABASE_HOST: database
+
+# Declare the volumes that our application uses.
+volumes:
+  db_data:
