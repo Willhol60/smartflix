@@ -4,7 +4,10 @@ services:
   database:
     image: postgres:14.2
     volumes:
-      - db_data:/lib/postgresql/data
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
 
   web:
     build: .
@@ -12,13 +15,15 @@ services:
       - "3000:3000"
     depends_on:
       - database
-    environment:
-        RAILS_ENV: development
-        DATABASE_NAME: boats_development
-        DATABASE_USER: boats_development
-        DATABASE_PASSWORD: 
-        DATABASE_HOST: database
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/smartflix
+    # environment:
+    #     RAILS_ENV: development
+    #     DATABASE_NAME: postgres
+    #     DATABASE_USER: postgres
+    #     DATABASE_HOST: database
 
 # Declare the volumes that our application uses.
-volumes:
-  db_data:
+# volumes:
+#   db_data:
