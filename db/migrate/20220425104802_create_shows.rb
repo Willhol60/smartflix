@@ -3,6 +3,7 @@
 class CreateShows < ActiveRecord::Migration[7.0]
   def change
     create_table :shows do |t|
+      t.string :show_id
       t.integer :show_type, null: false
       t.string :title, null: false
       t.string :director

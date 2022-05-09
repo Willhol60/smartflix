@@ -3,9 +3,9 @@ default: &default
   encoding: unicode
   pool: 5
   timeout: 5000
-  # host: database
-  # username: postgres
-  # password: password
+  host: <%= ENV['HOST'] || '127.0.0.1' %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
 
 development:
   <<: *default
