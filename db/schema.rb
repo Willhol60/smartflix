@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -12,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_25_114528) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_25_104802) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "shows", force: :cascade do |t|
+    t.string "show_id"
     t.integer "show_type", null: false
     t.string "title", null: false
     t.string "director"
@@ -30,7 +29,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_25_114528) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "show_id"
   end
 
 end
