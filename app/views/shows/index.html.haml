@@ -6,8 +6,9 @@
     .row{:style => "--bs-gutter-x: 0;"}
         - @shows.each do |show|
             .card.mt-4.mx-4{:style => "width: 14rem;"}
-                %img.card-img-top{:alt => "photo not displaying", :src => "https://via.placeholder.com/150"}
+                %img.card-img-top{:alt => "placeholder image", :src => "https://via.placeholder.com/150"}
                 .card-body
                     .h5.card-title= "#{show.title} (#{show.release_year})"
                     %p.card-text= show.show_type
                     %p.card-text= show.description
+                    -# button (star) 
