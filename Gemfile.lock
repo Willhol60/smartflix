@@ -282,7 +282,6 @@ DEPENDENCIES
   haml
   importmap-rails
   jbuilder
-  minitest
   pg
   pry-byebug
   puma (~> 5.0)
