@@ -2,6 +2,6 @@
 
 class ShowsController < ApplicationController
     def index
-        @shows = Show.take(params[:limit]&.to_i || 10)
+        @shows = Show.order('starred DESC').take(params[:limit]&.to_i || 10)
     end
 end

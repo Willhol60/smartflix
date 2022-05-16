@@ -5,4 +5,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "shows#index"
+  
+  resources :shows do
+    resource :stars, only: %w(update destroy)
+  end
+  
 end

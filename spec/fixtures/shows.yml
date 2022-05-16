@@ -12,6 +12,7 @@ one:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 two:
   show_type: 0
@@ -25,6 +26,7 @@ two:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 three:
   show_type: 1
@@ -38,6 +40,7 @@ three:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 four:
   show_type: 0
@@ -51,6 +54,7 @@ four:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 five:
   show_type: 0
@@ -64,6 +68,7 @@ five:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 six:
   show_type: 0
@@ -77,6 +82,7 @@ six:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 seven:
   show_type: 0
@@ -90,6 +96,7 @@ seven:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 eight:
   show_type: 0
@@ -103,6 +110,7 @@ eight:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 nine:
   show_type: 0
@@ -116,6 +124,7 @@ nine:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 ten:
   show_type: 0
@@ -129,6 +138,7 @@ ten:
   duration: MyString
   listed_in: MyText
   description: LovelyDescription
+  starred: false
 
 eleven:
   show_type: 0
@@ -142,6 +152,7 @@ eleven:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 twelve:
   show_type: 0
@@ -155,3 +166,4 @@ twelve:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
