@@ -4,15 +4,23 @@ class StarsController < ApplicationController
     before_action :load_post
   
     def update
+      # byebug
       @show.star!
 
-      redirect_to root_path
+      respond_to do |f|
+        f.html { redirect_to shows_path }
+        f.json { render json: @show }
+      end
     end
   
     def destroy
+      
       @show.unstar!
 
-      redirect_to root_path
+      respond_to do |f|
+        f.html { redirect_to shows_path }
+        f.json { render json: @show }
+      end
     end
   
     private
