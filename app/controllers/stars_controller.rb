@@ -6,13 +6,19 @@ class StarsController < ApplicationController
     def update
       @show.star!
 
-      redirect_to root_path
+      respond_to do |f|
+        f.html { redirect_to root_path }
+        f.json { render json: @show }
+      end
     end
   
     def destroy
       @show.unstar!
 
-      redirect_to root_path
+      respond_to do |f|
+        f.html { redirect_to root_path }
+        f.json { render json: @show }
+      end
     end
   
     private

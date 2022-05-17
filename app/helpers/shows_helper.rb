@@ -7,13 +7,13 @@ module ShowsHelper
         if show.starred?
             button_to_with_icon('bi bi-star', 'Unstar', url, {
                 method: :delete,
-                # remote: true,
+                remote: true,
                 class: 'btn btn-warning'
             })
         else
             button_to_with_icon('bi bi-star', 'Star', url, {
                 method: :put,
-                # remote: true,
+                remote: true,
                 class: 'btn btn-outline-warning'
             })
         end
