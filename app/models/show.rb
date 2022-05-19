@@ -10,15 +10,20 @@ class Show < ApplicationRecord
         'TV Show': 1
     }
 
-    def star!
-        self.starred = true
+    def toggle_star!
+        self.starred = !self.starred
         self.save!
     end
 
-    def unstar!
-        self.starred = false
-        self.save!
-    end
+    # def star!
+    #     self.starred = true
+    #     self.save!
+    # end
+
+    # def unstar!
+    #     self.starred = false
+    #     self.save!
+    # end
 
     def starred?
         self.starred == true
