@@ -1,16 +1,33 @@
 //= require jquery
 //= require jquery_ujs
 
-$(".button_to").on("click", function (e) {
-  const clicked = $(this.children[1]);
+console.log("before javascript");
 
-  if (clicked.attr("class").includes('btn-outline-warning')) {
-    clicked.removeClass('btn-outline-warning').addClass('btn-warning');
-    clicked.text("Starred");
-    clicked.prepend('<i class="bi bi-star"> </i>');
+// $(".button_to").closest('form').on("ajax:success", function () {
+//   console.log("completed");
+//   $('.btn-outline-warning').removeClass('btn-outline-warning').addClass('btn-warning');
+//   $('.btn-warning').removeClass('btn-warning').addClass('btn-outline-warning');
+//   $(".bi-star").remove()
+//   if ($(".btn").text() === "Star") {
+//     $(".btn").text("Unstar");
+//   } else {
+//     $(".btn").text("Star");
+//   }
+//   $(".btn-warning").prepend('<i class="bi bi-star"> </i>');
+//   $(".btn-outline-warning").prepend('<i class="bi bi-star"> </i>');
+// });
+
+// add ID to each show object via shows_helper.rb and then fetch that html object via that ID
+$(document).ajaxSuccess(function () {
+  console.log("completed");
+  $('.btn-outline-warning').removeClass('btn-outline-warning').addClass('btn-warning');
+  $('.btn-warning').removeClass('btn-warning').addClass('btn-outline-warning');
+  $(".bi-star").remove()
+  if ($(".btn").text() === "Star") {
+    $(".btn").text("Unstar");
   } else {
-    clicked.removeClass('btn-warning').addClass('btn-outline-warning');
-    clicked.text("Star");
-    clicked.prepend('<i class="bi bi-star"> </i>');
+    $(".btn").text("Star");
   }
+  $(".btn-warning").prepend('<i class="bi bi-star"> </i>');
+  $(".btn-outline-warning").prepend('<i class="bi bi-star"> </i>');
 });

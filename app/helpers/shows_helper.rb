@@ -6,6 +6,7 @@ module ShowsHelper
 
         options = {
             method: :put,
+            remote: true,
             class: variables(show)[:style_class]
         }
 
