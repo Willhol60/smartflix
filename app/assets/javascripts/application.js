@@ -1,8 +1,8 @@
 //= require jquery
 //= require jquery_ujs
 
-$(".button_to").on("click", function (e) {
-  const clicked = $(this.children[1]);
+$(document).ajaxSuccess( function (e) {
+  const clicked = $(e.currentTarget.activeElement);
 
   if (clicked.attr("class").includes('btn-outline-warning')) {
     clicked.removeClass('btn-outline-warning').addClass('btn-warning');

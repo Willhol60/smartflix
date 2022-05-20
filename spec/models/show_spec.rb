@@ -29,15 +29,15 @@ RSpec.describe(Show, :type => :model) do
     expect(show_fail.valid?).to(eq(false))
   end
 
-  it "has a method, star!, which changes the starred attribute from false to true" do
+  it "has a method, toggle_star!, which toggles a starred attribute of false to true" do
     show = Show.new(:show_type => 0, :title => "x", :release_year => 2000)
 
-    expect{ show.star! }.to change(show, :starred).from(false).to(true)
+    expect{ show.toggle_star! }.to change(show, :starred).from(false).to(true)
   end
 
-  it "has a method, unstar!, which changes the starred attribute from true to false" do
+  it "has a method, toggle_star!, which toggles a starred attribute of true to false" do
     show = Show.new(:show_type => 0, :title => "x", :release_year => 2000, :starred => true)
 
-    expect{ show.unstar! }.to change(show, :starred).from(true).to(false)
+    expect{ show.toggle_star! }.to change(show, :starred).from(true).to(false)
   end
 end
