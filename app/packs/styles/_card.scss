@@ -2,8 +2,23 @@
     font-weight: bold;
 }
 
-.card-text {
+.card-show-type {
     margin-bottom: 0.5rem;
     line-height: 1.3rem;
 }
 
+.card-text {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    line-height: 1.3rem;
+}
+
+.card {
+    position: relative;
+}
+
+.star-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

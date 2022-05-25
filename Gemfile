@@ -12,6 +12,7 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
 gem "webpacker"
 gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails'
 
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
@@ -77,7 +78,8 @@ end
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
-  gem "minitest"
+  # gem "minitest"
+  gem "rspec-rails"
     
   gem "selenium-webdriver"
   gem "webdrivers"

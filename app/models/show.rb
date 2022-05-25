@@ -9,4 +9,13 @@ class Show < ApplicationRecord
         'Movie': 0,
         'TV Show': 1
     }
+
+    def toggle_star!
+        self.starred = !self.starred
+        self.save!
+    end
+
+    def starred?
+        self.starred == true
+    end
 end

@@ -1,6 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   show_type: 1
   title: show1
   director: MyString
@@ -12,8 +13,10 @@ one:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 two:
+  id: 2
   show_type: 0
   title: show2
   director: MyString
@@ -25,8 +28,10 @@ two:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 three:
+  id: 3
   show_type: 1
   title: show3
   director: MyString
@@ -38,8 +43,10 @@ three:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 four:
+  id: 4
   show_type: 0
   title: show4
   director: MyString
@@ -51,8 +58,10 @@ four:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 five:
+  id: 5
   show_type: 0
   title: show5
   director: MyString
@@ -64,8 +73,10 @@ five:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 six:
+  id: 6
   show_type: 0
   title: show6
   director: MyString
@@ -77,8 +88,10 @@ six:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 seven:
+  id: 7
   show_type: 0
   title: show7
   director: MyString
@@ -90,8 +103,10 @@ seven:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 eight:
+  id: 8
   show_type: 0
   title: show8
   director: MyString
@@ -103,8 +118,10 @@ eight:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 nine:
+  id: 9
   show_type: 0
   title: show9
   director: MyString
@@ -116,8 +133,10 @@ nine:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 ten:
+  id: 10
   show_type: 0
   title: show10
   director: MyString
@@ -129,8 +148,10 @@ ten:
   duration: MyString
   listed_in: MyText
   description: LovelyDescription
+  starred: false
 
 eleven:
+  id: 11
   show_type: 0
   title: show11
   director: MyString
@@ -142,8 +163,10 @@ eleven:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
 
 twelve:
+  id: 12
   show_type: 0
   title: show12
   director: MyString
@@ -155,3 +178,4 @@ twelve:
   duration: MyString
   listed_in: MyText
   description: MyText
+  starred: false
