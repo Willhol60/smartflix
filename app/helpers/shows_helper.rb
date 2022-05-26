@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 module ShowsHelper
-    def button_to_toggle_show_starred(show)
+    # ***NO LONGER IN USE - DELETE WHEN CONFIDENT***
+    def NOTINUSE_button_to_toggle_show_starred(show)
         url = show_path(show)
 
         options = {
