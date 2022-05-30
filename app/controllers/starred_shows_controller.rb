@@ -12,7 +12,8 @@ class StarredShowsController < ApplicationController
     starred_show.save!
 
     respond_to do |f|
-      f.json { render json: @show }
+      # f.json { render json: @show }
+      f.js
     end
   end
 
@@ -26,6 +27,7 @@ class StarredShowsController < ApplicationController
 
     respond_to do |f|
       f.json { render json: @show }
+      f.js
     end
   end
 

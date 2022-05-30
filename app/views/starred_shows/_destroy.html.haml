@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module StarredShowsHelper
   def button_to_toggle_show_starred(show)
       options = {
@@ -11,18 +9,6 @@ module StarredShowsHelper
       icon = content_tag(:i, nil, class: 'bi bi-star')
       icon_with_star = icon << raw(' ') << h(variables(show)[:title])
       button_to(icon_with_star, variables(show)[:url], options)
-  end
-
-  def button_to_create_starred_show(show)
-    options = {
-      method: :post,
-      remote: true,
-      class: 'btn btn-outline-warning'
-    }
-
-    icon = content_tag(:i, nil, class: 'bi bi-star')
-    icon_with_star = icon << raw(' ') << h('Star')
-    button_to(icon_with_star, show_starred_shows_path(show), options)
   end
 
   def variables(show)
