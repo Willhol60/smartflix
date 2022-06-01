@@ -5,9 +5,6 @@ $(document).ready(function () {
   $(".button_to").on("ajax:success", function (e) {
     const clicked = $(this).find('.btn');
 
-    // clicked.html(e)
-    // clicked.contentWindow.location.reload(true);
-     
     if (clicked.attr("class").includes('btn-outline-warning')) {
       clicked.removeClass('btn-outline-warning').addClass('btn btn-warning');
       clicked.text("Starred");

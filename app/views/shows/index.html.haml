@@ -12,4 +12,4 @@
                     .h5.card-title= "#{show.title} (#{show.release_year})"
                     %p.card-show-type= show.show_type
                     %p.card-text= show.description
-                    .star-button{:id => "#{show.show_id}"}= button_to_toggle_show_starred(show)
+                    .star-button= button_to_toggle_show_starred(show)

@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 module ShowsHelper
-    # ***NO LONGER IN USE - DELETE WHEN CONFIDENT***
-    def NOTINUSE_button_to_toggle_show_starred(show)
+    def button_to_toggle_show_starred(show)
         url = show_path(show)
 
         options = {
@@ -17,7 +16,7 @@ module ShowsHelper
     end
 
     def variables(show)
-        if show.starred?
+        if show.voted_up_by? current_user
             { 
                 title: 'Starred',
                 style_class: 'btn btn-warning'
