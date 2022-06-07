@@ -1,22 +1,20 @@
 # frozen_string_literal: true
 
 class ShowsController < ApplicationController
+    before_action :find_show, only: :update
+
     def index
         @shows = limit(Show.order('id ASC')).sort_by{ |a| a.starred?(current_user) ? 0 : 1 }
     end
 
-    def update
-        find_show
-        
-        if @show.voted_up_by? current_user
-            @show.disliked_by current_user
+    def update        
+        if current_user.voted_for? @show
+            @show.unliked_by current_user
         else
             @show.liked_by current_user
         end
 
-        respond_to do |f|
-            f.json
-        end
+        respond_to { |f| f.json }
     end
 
     private

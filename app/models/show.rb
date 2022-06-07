@@ -13,6 +13,6 @@ class Show < ApplicationRecord
     }
 
     def starred?(user)
-        self.voted_up_by? user
+        user.voted_for? self
     end
 end
