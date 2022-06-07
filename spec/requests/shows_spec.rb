@@ -2,7 +2,6 @@
 
 require "rails_helper"
 require "support/devise"
-require "pry"
 
 RSpec.describe "Shows", type: :request do
   before :each do
@@ -21,7 +20,6 @@ RSpec.describe "Shows", type: :request do
     it "which toggles 'voted_for?' from false to true" do
       show = Show.create!(:show_type => 0, :title => "x", :release_year => 2000)
 
-      # binding.pry
       expect{ show.liked_by @user }.to change{ @user.voted_for? show }.from(false).to(true)
     end
     
