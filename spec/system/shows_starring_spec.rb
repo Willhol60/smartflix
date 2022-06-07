@@ -2,11 +2,15 @@
 
 require "rails_helper"
 
-RSpec.describe "The star button on a show's card", :type => :system, :js => true do
+RSpec.describe "The star button on a show's card", type: :system, :js => true do
   fixtures :shows
 
-  context "when clicked on the card of a show with starred: false" do
+  before :each do
+    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd')
+    sign_in(user, :scope => :user)
+  end
 
+  context "when clicked on the card of a show with starred: false" do
     before do
       visit "/"
     end

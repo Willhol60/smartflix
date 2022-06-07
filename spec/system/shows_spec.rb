@@ -2,8 +2,13 @@
 
 require "rails_helper"
 
-RSpec.describe "The shows index page", :type => :system do
+RSpec.describe "The shows index page", type: :system do
   fixtures :shows
+
+  before :each do
+    user = User.create!(:email => 'test@example.com', :password => 'f4k3p455w0rd')
+    sign_in(user, :scope => :user)
+  end
 
   it "displays all information for 10 shows by default" do
     visit "/"
