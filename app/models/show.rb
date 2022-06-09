@@ -13,7 +13,7 @@ class Show < ApplicationRecord
         'TV Show': 1
     }
 
-    def self.starred_by_user(id)
+    def self.order_starred_by_user(id)
         by_user = sanitize_sql_array([ 'case when votes.voter_id = %d then 0 else 1 end', id])
         order(Arel.sql(by_user))
     end

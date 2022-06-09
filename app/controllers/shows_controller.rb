@@ -1,14 +1,11 @@
 # frozen_string_literal: true
 
-
-require "pry"
-
 class ShowsController < ApplicationController
     before_action :find_show, only: :update
 
     def index
         @shows = Show.left_outer_joins(:votes)
-                     .starred_by_user(current_user.id)
+                     .order_starred_by_user(current_user.id)
                      .order("id")
                      .limit(params[:limit]&.to_i || 10)
                      .uniq
