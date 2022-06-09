@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "rails_helper"
-require "pry"
 
 RSpec.describe "The star button on a show's card", type: :system, :js => true do
   # fixtures :shows
