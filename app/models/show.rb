@@ -6,6 +6,7 @@ class Show < ApplicationRecord
     validates :show_type, :title, :release_year, presence: true
 
     acts_as_votable
+    has_many :votes, foreign_key: :votable_id
 
     enum show_type: {
         'Movie': 0,

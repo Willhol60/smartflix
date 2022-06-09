@@ -9,4 +9,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   acts_as_voter
+  has_many :votes, foreign_key: :voter_id
+
 end

@@ -1,10 +1,16 @@
 # frozen_string_literal: true
 
+
+require "pry"
+
 class ShowsController < ApplicationController
     before_action :find_show, only: :update
 
     def index
-        @shows = limit(Show.order('id ASC')).sort_by{ |a| a.starred?(current_user) ? 0 : 1 }
+        # @shows = limit(Show.order('id ASC')).sort_by{ |a| a.starred?(current_user) ? 0 : 1 }
+        @shows = Show.left_outer_joins(:votes)
+                     .order("votes.votable_id, id")
+                     .limit(params[:limit]&.to_i || 10)
     end
 
     def update        
