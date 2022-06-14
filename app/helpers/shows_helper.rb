@@ -16,7 +16,7 @@ module ShowsHelper
     end
 
     def variables(show)
-        if show.starred?
+        if current_user.voted_for? show
             { 
                 title: 'Starred',
                 style_class: 'btn btn-warning'
