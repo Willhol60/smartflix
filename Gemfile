@@ -58,6 +58,8 @@ gem "sassc-rails"
 gem "devise"
 
 gem 'acts_as_votable'
+gem 'omniauth-facebook'
+gem 'omniauth-rails_csrf_protection'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
