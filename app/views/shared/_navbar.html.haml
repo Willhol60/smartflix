@@ -3,10 +3,10 @@
     %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarSupportedContent", "data-bs-toggle" => "collapse", :type => "button"}
       %span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      %ul.navbar-nav.me-auto
+      %ul.navbar-nav.me-auto.d-flex
         - if user_signed_in?
-          %li.nav-item
+          %li
             = link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link"
         - else
-          %li.nav-item
+          %li.float-right
             = link_to "Log in", new_user_session_path, class: "nav-link"
