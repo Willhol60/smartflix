@@ -5,8 +5,10 @@ class ShowsController < ApplicationController
 
     def index
         @shows = Show.left_outer_joins(:votes)
-                     .order("votes.votable_id, id")
+                     .order_starred_by_user(current_user.id)
+                     .order("id")
                      .limit(params[:limit]&.to_i || 10)
+                     .uniq
     end
 
     def update        

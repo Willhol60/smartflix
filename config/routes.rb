@@ -7,8 +7,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "shows#index"
   
-  resources :shows do
-    resources :starred_shows, only: [:create, :destroy]
-  end
+  resources :shows
   
 end
