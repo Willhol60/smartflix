@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "application_record"
+require_relative 'application_record'
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
@@ -10,5 +10,4 @@ class User < ApplicationRecord
 
   acts_as_voter
   has_many :votes, foreign_key: :voter_id
-
 end
